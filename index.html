@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AUTHENTRIC | AI業務OS設計 — AIを「使える人がいる会社」から「AIが働く会社」へ</title>
+  <meta name="description" content="AUTHENTRICは、業務そのものをAI前提に設計し直す「AI業務OS設計」の会社です。個人の頑張りに依存したAI活用を、会社に残る仕組みに変えます。">
+  <meta property="og:title" content="AUTHENTRIC | AI業務OS設計">
+  <meta property="og:description" content="AIを「使える人がいる会社」から、「AIが働く会社」へ。">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/authentric-symbol-black.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Shippori+Mincho:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="AUTHENTRIC ホーム">
+      <img class="symbol" src="assets/authentric-symbol-black.png" alt="">
+      <img class="wordmark" src="assets/brand-wordmark-black.png" alt="AUTHENTRIC">
+    </a>
+    <button class="nav-toggle" data-nav-toggle aria-label="メニュー" aria-expanded="false">≡</button>
+    <nav class="global-nav" data-nav aria-label="グローバルナビゲーション">
+      <a href="index.html" aria-current="page">ホーム</a>
+      <a href="services.html">事業内容</a>
+      <a href="company.html">会社情報</a>
+      <a href="contact.html" class="nav-cta">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ hero ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="hero-kicker">AI業務OS設計 — AUTHENTRIC</span>
+      <h1 class="hero-title">
+        AIを<span class="quiet">「使える人がいる会社」</span>から、<br>
+        「AIが働く会社」へ。
+      </h1>
+      <div class="hero-grid">
+      <div>
+        <p class="hero-lead">
+          ツールを入れても、仕事は変わりませんでした——多くの会社で。
+          足りないのはやる気でも性能でもなく、AIが働くための<strong>業務の設計</strong>です。
+          AUTHENTRICは、個人の頑張りに依存したAI活用を、会社に残る仕組みに変えます。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">お問い合わせ <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="services.html">事業内容を見る</a>
+        </div>
+        <p class="hero-note">営業日24時間以内にご返信します。</p>
+      </div>
+
+      <div class="mock-cluster" aria-hidden="true"><!-- 実物の空気を出す手描きUI -->
+        <div class="mock-card mock-repo">
+          <div class="mock-head">御社の業務リポジトリ <span class="tag">PRIVATE</span></div>
+          <ul>
+            <li><strong>rules/</strong> — 会社のルール・判断基準</li>
+            <li><strong>prompts/</strong> — 御社専用プロンプト</li>
+            <li><strong>routines/</strong> — 定型業務の自動化</li>
+            <li><strong>docs/</strong> — AIが読める業務知識</li>
+            <li class="file">README.md — はじめに読む</li>
+          </ul>
+        </div>
+        <div class="mock-card mock-role">
+          <div class="mock-head">役割カード：議事録AI <span class="tag">ROLE</span></div>
+          <div class="body">
+            <dl>
+              <dt>任せること</dt><dd class="ok">要点の抽出・清書</dd>
+              <dt>任せないこと</dt><dd class="ng">決定事項の判断</dd>
+              <dt>最終確認</dt><dd>人（担当者）が行う</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="mock-card mock-routine">
+          <div class="mock-head">今日の定型業務 <span class="tag">ROUTINES</span></div>
+          <ul>
+            <li>請求書PDFの仕分け <span class="st done">完了</span></li>
+            <li>議事録の要約 <span class="st run">実行中</span></li>
+            <li>問い合わせの分類 <span class="st done">完了</span></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 01 problem ============ -->
+  <section class="block tinted">
+    <div class="wrap">
+      <div class="kicker reveal"><span class="no">01</span><span class="label">Issue</span></div>
+      <h2 class="headline reveal">導入したのに、変わらない。</h2>
+      <p class="section-lead reveal">
+        AIを「入れた」会社は増えました。AIで「回っている」会社は、まだほとんどありません。
+        その差は、こんなところに現れます。
+      </p>
+      <div class="card-row">
+        <article class="p-card reveal">
+          <span class="p-no">CASE 1</span>
+          <h3>使う人だけが、<br>使っている。</h3>
+          <p>全社で契約した。説明会もやった。それでも開いているのは、いつもの数人だけ。「便利らしい」で止まっている人が、社内の大半を占めている。</p>
+        </article>
+        <article class="p-card reveal">
+          <span class="p-no">CASE 2</span>
+          <h3>その人が辞めたら、<br>終わる。</h3>
+          <p>プロンプトの工夫も、うまくいったやり方も、ぜんぶ個人のメモとチャットログの中。会社には何も蓄積されない構造のまま、活用「実績」だけが積み上がっていく。</p>
+        </article>
+        <article class="p-card reveal">
+          <span class="p-no">CASE 3</span>
+          <h3>結局、どこに<br>何があるのか。</h3>
+          <p>AIに読ませたい情報が、人の頭・メール・共有フォルダの奥に散らばっている。探せない情報は、AIも扱えない。だから毎回、説明からやり直しになる。</p>
+        </article>
+      </div>
+      <figure class="img-slot ratio-wide reveal" style="margin-top:56px;"
+              data-label="IMG-04: 導入前後のビフォー/アフター図（assets/img-04-before-after.png）">
+        <img src="assets/img-04-before-after.png" alt="導入前は個人ごとにバラバラだったAI活用が、導入後は会社の仕組みとして流れている比較図" onerror="this.remove()">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ statement ============ -->
+  <section class="statement-band">
+    <div class="wrap">
+      <span class="s-kicker">変わらない理由は、ひとつです。</span>
+      <h2>AIが働ける環境が、<br><span class="em2">社内にまだ無い</span>だけ。</h2>
+      <p>
+        社員のやる気の問題でも、ツールの性能の問題でもありません。
+        だから私たちは、その環境そのものをつくります。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 02 what we do ============ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="kicker reveal"><span class="no">02</span><span class="label">What we do</span></div>
+      <div class="intro-grid">
+        <div>
+          <h2 class="headline reveal">Claude Codeを、<br>御社の<span class="em">戦力</span>にします。</h2>
+          <p class="section-lead reveal">
+            Claude Codeは、資料を作り、データを整理し、定型業務をこなすAIエージェントです。
+            ただし、契約しただけでは働きません。<strong>何を任せるか、どこまで任せるか、品質をどう守るか</strong>——
+            AIが実際に働ける環境を御社の中につくるのが、私たちの仕事です。
+          </p>
+        </div>
+        <figure class="img-slot ratio-43 reveal"
+                data-label="IMG-01: 人とClaude Codeの役割分担の関係図（assets/img-01-ai-work-os.png）">
+          <img src="assets/img-01-ai-work-os.png" alt="人が判断し、Claude Codeが実務をこなし、成果が会社に蓄積される関係図" onerror="this.remove()">
+        </figure>
+      </div>
+      <div class="os-grid">
+          <article class="os-item reveal">
+            <span class="os-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14"/><path d="M15 6v14"/></svg></span>
+            <div>
+              <h3>情報の地図<small>SOURCE BOUNDARY</small></h3>
+              <p>どの情報がどこにあり、AIはどこまで読んでよいか。境界線を引くことから始めます。</p>
+            </div>
+          </article>
+          <article class="os-item reveal">
+            <span class="os-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5"/></svg></span>
+            <div>
+              <h3>役割分担の設計<small>ROLE CARD</small></h3>
+              <p>「ここまでAI、ここからは人」を明文化し、誰が見ても同じ分担で回るようにします。</p>
+            </div>
+          </article>
+          <article class="os-item reveal">
+            <span class="os-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.4-2.9 7.4-7 9-4.1-1.6-7-4.6-7-9V6l7-3z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <div>
+              <h3>品質の関所<small>QUALITY GATE</small></h3>
+              <p>AIの成果物を、誰が・何を基準に確認してから外に出すか。関所を業務に埋め込みます。</p>
+            </div>
+          </article>
+          <article class="os-item reveal">
+            <span class="os-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.6-5.6"/><path d="M18 3v3.5h-3.5"/><path d="M20 12a8 8 0 0 1-13.6 5.6"/><path d="M6 21v-3.5h3.5"/></svg></span>
+            <div>
+              <h3>学びの循環<small>LEARNING LOOP</small></h3>
+              <p>うまくいった型は個人のメモではなく会社の資産へ。使うほど賢くなる仕組みにします。</p>
+            </div>
+          </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 services ============ -->
+  <section class="block tinted">
+    <div class="wrap">
+      <div class="kicker reveal"><span class="no">03</span><span class="label">Services</span></div>
+      <h2 class="headline reveal">まず、動かす。そして、組み込む。</h2>
+      <p class="section-lead reveal">
+        二つのサービスは、一本の道です。最初の90分から、会社の仕組みになるまで。
+      </p>
+      <div class="svc-grid">
+        <article class="svc-card reveal">
+          <figure class="img-slot ratio-169 svc-thumb"
+                  data-label="IMG-02: ハンズオンで一緒にClaude Codeを動かす様子（assets/img-02-onboarding.png）">
+            <img src="assets/img-02-onboarding.png" alt="経営者が伴走者と一緒にPCでClaude Codeを動かしている様子" onerror="this.remove()">
+          </figure>
+          <span class="svc-step">STEP 1 — はじめの一歩</span>
+          <h3>まず、動かす。</h3>
+          <p class="svc-name">AIエージェント初期導入パック</p>
+          <span class="svc-oneliner">ひとことで言うと：2回のハンズオンでClaude Codeを使えるようにして、御社の業務をひとつ、実際に自動化して納品するサービスです。</span>
+          <div class="after-box">
+            <span class="a-title">導入すると、こうなる</span>
+            <ul>
+              <li>請求書の仕分けや議事録の要約を、<strong>AIが毎日こなす</strong>ようになる</li>
+              <li>あなた自身がAIに指示を出して、<strong>調査や資料の下書きを任せられる</strong>ようになる</li>
+              <li>社内にAIの作業場が残り、<strong>次の自動化を自分たちで増やせる</strong>ようになる</li>
+            </ul>
+          </div>
+          <div class="meta-chips">
+            <span>90分×2回</span><span>標準自動化パック1件</span><span>14日間サポート</span>
+          </div>
+          <a class="svc-link" href="services.html#onboarding">サービス詳細を見る →</a>
+        </article>
+        <article class="svc-card reveal">
+          <figure class="img-slot ratio-169 svc-thumb"
+                  data-label="IMG-03: 業務の設計図（ブループリント）のイメージ（assets/img-03-blueprint.png）">
+            <img src="assets/img-03-blueprint.png" alt="業務フローの設計図の上で、AIに任せる部分と人が判断する部分が色分けされているイメージ" onerror="this.remove()">
+          </figure>
+          <span class="svc-step">STEP 2 — 会社の仕組みへ</span>
+          <h3>業務に、組み込む。</h3>
+          <p class="svc-name">AI業務OS構築</p>
+          <span class="svc-oneliner">ひとことで言うと：どの業務をAIに任せられるかを診断し、会社ぐるみでAIが働く仕組みを設計・伴走するサービスです。</span>
+          <div class="after-box">
+            <span class="a-title">導入すると、こうなる</span>
+            <ul>
+              <li>どの業務をAIに任せるべきかが、<strong>経営判断として明確になる</strong></li>
+              <li>特定の人に頼っていたノウハウが、<strong>会社の資産として蓄積され始める</strong></li>
+              <li>AIの成果物が、<strong>決めた品質チェックを通ってから外に出る</strong>ようになる</li>
+            </ul>
+          </div>
+          <div class="meta-chips">
+            <span>診断 → 設計 → 試運転 → 伴走</span><span>各段階で成果物が残る</span>
+          </div>
+          <a class="svc-link" href="services.html#business-os">サービス詳細を見る →</a>
+        </article>
+      </div>
+      <p class="svc-bridge reveal">初期導入パックで見つかった「AIに任せたい業務」が、そのままAI業務OS構築の出発点になります。</p>
+    </div>
+  </section>
+
+  <!-- ============ 04 trust ============ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="kicker reveal"><span class="no">04</span><span class="label">Why us</span></div>
+      <h2 class="headline reveal">実績より先に、実物を。</h2>
+      <p class="section-lead reveal">
+        言葉で約束するのではなく、確認できるものでお見せします。
+      </p>
+      <div class="trust-grid">
+        <article class="trust-item reveal">
+          <span class="t-no">一</span>
+          <h3>成果物が、すべて残る。</h3>
+          <p>診断レポート、設計書、役割カード、自動化の仕組み。私たちの仕事は、話した時間ではなく手元に残ったもので測ってください。どの段階で止めても、それまでの成果物は御社のものです。</p>
+        </article>
+        <article class="trust-item reveal">
+          <span class="t-no">二</span>
+          <h3>自分たちが、毎日使っている。</h3>
+          <p>AUTHENTRICの経営は、AIエージェントとリポジトリの上で動いています。戦略も議事録も日々の実行も、です。ご提案するのは理論ではなく、私たちが自社で毎日運用している仕組みの、御社版です。</p>
+        </article>
+        <article class="trust-item reveal">
+          <span class="t-no">三</span>
+          <h3>終わり方まで、設計してある。</h3>
+          <p>納品物は御社所有のリポジトリに残し、サポート期間が終われば私たちのアクセス権は消えます。囲い込まず、導入して、手放す。それを前提に設計しています。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 flow ============ -->
+  <section class="block tinted">
+    <div class="wrap">
+      <div class="kicker reveal"><span class="no">05</span><span class="label">Process</span></div>
+      <h2 class="headline reveal">進め方は、四段階。</h2>
+      <p class="section-lead reveal">
+        いきなり大きな契約は要りません。段階ごとに、進むかどうかを決められます。
+      </p>
+      <div class="flow-row">
+        <article class="flow-step reveal">
+          <span class="f-en">Audit</span>
+          <h3>診断</h3>
+          <span class="f-time">2〜3営業日</span>
+          <p>業務の流れと情報の在り処を棚卸しし、AIで変えられる業務を見極めます。</p>
+        </article>
+        <article class="flow-step reveal">
+          <span class="f-en">Blueprint</span>
+          <h3>設計</h3>
+          <span class="f-time">5〜7営業日</span>
+          <p>AIと人の役割分担と品質の関所を、御社の設計図に起こします。</p>
+        </article>
+        <article class="flow-step reveal">
+          <span class="f-en">Pilot</span>
+          <h3>試運転</h3>
+          <span class="f-time">2〜4週間</span>
+          <p>設計を実際の業務で回し、導入前後の変化を数字で確かめます。</p>
+        </article>
+        <article class="flow-step reveal">
+          <span class="f-en">Retainer</span>
+          <h3>伴走</h3>
+          <span class="f-time">月次</span>
+          <p>月次のふりかえりと改善で、AIが働く範囲を広げていきます。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 members ============ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="kicker reveal"><span class="no">06</span><span class="label">Members</span></div>
+      <h2 class="headline reveal">運営メンバー</h2>
+      <div class="member-grid" style="margin-top:48px;">
+        <article class="member-card reveal">
+          <div class="avatar">PHOTO<br>（差し替え）</div>
+          <div>
+            <h3>桜木佑歩</h3>
+            <p>【一言を挿入。】</p>
+          </div>
+        </article>
+        <article class="member-card reveal">
+          <div class="avatar">PHOTO<br>（差し替え）</div>
+          <div>
+            <h3>明時栄稀</h3>
+            <p>【一言を挿入。】</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta-band">
+    <div class="wrap inner">
+      <h2>AIの導入、<br>話してみませんか。</h2>
+      <p>
+        現状を伺い、AIで変えられる業務と変えられない業務を、率直にお伝えします。
+      </p>
+      <a class="btn btn-primary" href="contact.html">お問い合わせ <span class="arrow">→</span></a>
+      <p class="sla">営業日24時間以内にご返信します。</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img class="symbol" src="assets/authentric-symbol-black.png" alt="AUTHENTRIC">
+        <p>AIを「使える人がいる会社」から、「AIが働く会社」へ。AI業務OS設計のAUTHENTRIC。</p>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <div class="col">
+          <h4>Services</h4>
+          <a href="services.html#onboarding">AIエージェント初期導入パック</a>
+          <a href="services.html#business-os">AI業務OS構築</a>
+        </div>
+        <div class="col">
+          <h4>Company</h4>
+          <a href="company.html">会社情報</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AUTHENTRIC</span>
+      <span>本ページは社内レビュー用プロトタイプです。</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
