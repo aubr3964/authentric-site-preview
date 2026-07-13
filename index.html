@@ -3,23 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AUTHENTRIC | AI業務OS設計 — AIを「使える人がいる会社」から「AIが働く会社」へ</title>
+  <title>AUTHENTRIC | AI業務OS設計で「AIが働く会社」へ</title>
   <meta name="description" content="AUTHENTRICは、業務そのものをAI前提に設計し直す「AI業務OS設計」の会社です。個人の頑張りに依存したAI活用を、会社に残る仕組みに変えます。">
+  <!-- 公開前のためnoindex。本公開時に削除する（README公開チェックリスト参照） -->
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://aubr3964.github.io/authentric-site-preview/index.html">
+  <meta property="og:site_name" content="AUTHENTRIC">
   <meta property="og:title" content="AUTHENTRIC | AI業務OS設計">
   <meta property="og:description" content="AIを「使える人がいる会社」から、「AIが働く会社」へ。">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="assets/authentric-symbol-black.png">
+  <meta property="og:url" content="https://aubr3964.github.io/authentric-site-preview/index.html">
+  <meta property="og:image" content="https://aubr3964.github.io/authentric-site-preview/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AUTHENTRIC",
+    "url": "https://aubr3964.github.io/authentric-site-preview/",
+    "logo": "https://aubr3964.github.io/authentric-site-preview/assets/favicon-192.png",
+    "description": "業務そのものをAI前提に設計し直す「AI業務OS設計」の会社。"
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Shippori+Mincho:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Shippori+Mincho:wght@600&family=Inter:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main">本文へスキップ</a>
+
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="AUTHENTRIC ホーム">
-      <img class="symbol" src="assets/authentric-symbol-black.png" alt="">
+      <img class="symbol" src="assets/authentric-symbol-96.png" width="96" height="96" alt="">
       <img class="wordmark" src="assets/brand-wordmark-black.png" alt="AUTHENTRIC">
     </a>
     <button class="nav-toggle" data-nav-toggle aria-label="メニュー" aria-expanded="false">≡</button>
@@ -27,12 +51,12 @@
       <a href="index.html" aria-current="page">ホーム</a>
       <a href="services.html">事業内容</a>
       <a href="company.html">会社情報</a>
-      <a href="contact.html" class="nav-cta">お問い合わせ</a>
+      <a href="contact.html" class="nav-cta" data-cta="nav_contact">お問い合わせ</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main">
 
   <!-- ============ hero ============ -->
   <section class="hero">
@@ -50,8 +74,8 @@
           AUTHENTRICは、個人の頑張りに依存したAI活用を、会社に残る仕組みに変えます。
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="contact.html">お問い合わせ <span class="arrow">→</span></a>
-          <a class="btn btn-ghost" href="services.html">事業内容を見る</a>
+          <a class="btn btn-primary" href="contact.html" data-cta="hero_contact">お問い合わせ <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="services.html" data-cta="hero_services">事業内容を見る</a>
         </div>
         <p class="hero-note">営業日24時間以内にご返信します。</p>
       </div>
@@ -118,7 +142,10 @@
       </div>
       <figure class="img-slot ratio-wide reveal" style="margin-top:56px;"
               data-label="IMG-04: 導入前後のビフォー/アフター図（assets/img-04-before-after.png）">
-        <img src="assets/img-04-before-after.png" alt="導入前は個人ごとにバラバラだったAI活用が、導入後は会社の仕組みとして流れている比較図" onerror="this.remove()">
+        <picture>
+          <source type="image/webp" srcset="assets/img-04-before-after-750.webp 750w, assets/img-04-before-after.webp 1983w" sizes="(max-width: 900px) 100vw, 1032px">
+          <img src="assets/img-04-before-after.png" width="1983" height="793" alt="導入前は個人ごとにバラバラだったAI活用が、導入後は会社の仕組みとして流れている比較図" loading="lazy" decoding="async" onerror="this.closest('picture').remove()">
+        </picture>
       </figure>
     </div>
   </section>
@@ -150,7 +177,10 @@
         </div>
         <figure class="img-slot ratio-43 reveal"
                 data-label="IMG-01: 人とClaude Codeの役割分担の関係図（assets/img-01-ai-work-os.png）">
-          <img src="assets/img-01-ai-work-os.png" alt="人が判断し、Claude Codeが実務をこなし、成果が会社に蓄積される関係図" onerror="this.remove()">
+          <picture>
+            <source type="image/webp" srcset="assets/img-01-ai-work-os-750.webp 750w, assets/img-01-ai-work-os.webp 1448w" sizes="(max-width: 900px) 100vw, 460px">
+            <img src="assets/img-01-ai-work-os.png" width="1448" height="1086" alt="人が判断し、Claude Codeが実務をこなし、成果が会社に蓄積される関係図" loading="lazy" decoding="async" onerror="this.closest('picture').remove()">
+          </picture>
         </figure>
       </div>
       <div class="os-grid">
@@ -198,7 +228,10 @@
         <article class="svc-card reveal">
           <figure class="img-slot ratio-169 svc-thumb"
                   data-label="IMG-02: ハンズオンで一緒にClaude Codeを動かす様子（assets/img-02-onboarding.png）">
-            <img src="assets/img-02-onboarding.png" alt="経営者が伴走者と一緒にPCでClaude Codeを動かしている様子" onerror="this.remove()">
+            <picture>
+              <source type="image/webp" srcset="assets/img-02-onboarding-750.webp 750w, assets/img-02-onboarding.webp 1672w" sizes="(max-width: 900px) 100vw, 490px">
+              <img src="assets/img-02-onboarding.png" width="1672" height="941" alt="経営者が伴走者と一緒にPCでClaude Codeを動かしている様子" loading="lazy" decoding="async" onerror="this.closest('picture').remove()">
+            </picture>
           </figure>
           <span class="svc-step">STEP 1 — はじめの一歩</span>
           <h3>まず、動かす。</h3>
@@ -220,7 +253,10 @@
         <article class="svc-card reveal">
           <figure class="img-slot ratio-169 svc-thumb"
                   data-label="IMG-03: 業務の設計図（ブループリント）のイメージ（assets/img-03-blueprint.png）">
-            <img src="assets/img-03-blueprint.png" alt="業務フローの設計図の上で、AIに任せる部分と人が判断する部分が色分けされているイメージ" onerror="this.remove()">
+            <picture>
+              <source type="image/webp" srcset="assets/img-03-blueprint-750.webp 750w, assets/img-03-blueprint.webp 1672w" sizes="(max-width: 900px) 100vw, 490px">
+              <img src="assets/img-03-blueprint.png" width="1672" height="941" alt="業務フローの設計図の上で、AIに任せる部分と人が判断する部分が色分けされているイメージ" loading="lazy" decoding="async" onerror="this.closest('picture').remove()">
+            </picture>
           </figure>
           <span class="svc-step">STEP 2 — 会社の仕組みへ</span>
           <h3>業務に、組み込む。</h3>
@@ -340,7 +376,7 @@
       <p>
         現状を伺い、AIで変えられる業務と変えられない業務を、率直にお伝えします。
       </p>
-      <a class="btn btn-primary" href="contact.html">お問い合わせ <span class="arrow">→</span></a>
+      <a class="btn btn-primary" href="contact.html" data-cta="cta_band_contact">お問い合わせ <span class="arrow">→</span></a>
       <p class="sla">営業日24時間以内にご返信します。</p>
     </div>
   </section>
@@ -351,7 +387,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <img class="symbol" src="assets/authentric-symbol-black.png" alt="AUTHENTRIC">
+        <img class="symbol" src="assets/authentric-symbol-96.png" width="96" height="96" alt="AUTHENTRIC">
         <p>AIを「使える人がいる会社」から、「AIが働く会社」へ。AI業務OS設計のAUTHENTRIC。</p>
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">

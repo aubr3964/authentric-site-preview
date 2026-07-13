@@ -5,18 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>事業内容 | AUTHENTRIC — AIエージェント初期導入パック / AI業務OS構築</title>
   <meta name="description" content="AUTHENTRICの二つのサービス。90分×2回でAIエージェントを動かせる状態にする初期導入パックと、業務そのものをAI前提に設計し直すAI業務OS構築。">
-  <link rel="icon" type="image/png" href="assets/authentric-symbol-black.png">
+  <!-- 公開前のためnoindex。本公開時に削除する（README公開チェックリスト参照） -->
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://aubr3964.github.io/authentric-site-preview/services.html">
+  <meta property="og:site_name" content="AUTHENTRIC">
+  <meta property="og:title" content="事業内容 | AUTHENTRIC">
+  <meta property="og:description" content="90分×2回でAIエージェントを動かせる状態にする初期導入パックと、業務そのものをAI前提に設計し直すAI業務OS構築。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aubr3964.github.io/authentric-site-preview/services.html">
+  <meta property="og:image" content="https://aubr3964.github.io/authentric-site-preview/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Shippori+Mincho:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Shippori+Mincho:wght@600&family=Inter:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main">本文へスキップ</a>
+
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="AUTHENTRIC ホーム">
-      <img class="symbol" src="assets/authentric-symbol-black.png" alt="">
+      <img class="symbol" src="assets/authentric-symbol-96.png" width="96" height="96" alt="">
       <img class="wordmark" src="assets/brand-wordmark-black.png" alt="AUTHENTRIC">
     </a>
     <button class="nav-toggle" data-nav-toggle aria-label="メニュー" aria-expanded="false">≡</button>
@@ -24,12 +41,12 @@
       <a href="index.html">ホーム</a>
       <a href="services.html" aria-current="page">事業内容</a>
       <a href="company.html">会社情報</a>
-      <a href="contact.html" class="nav-cta">お問い合わせ</a>
+      <a href="contact.html" class="nav-cta" data-cta="nav_contact">お問い合わせ</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main">
 
   <div class="page-head">
     <div class="wrap">
@@ -83,7 +100,10 @@
         </p>
         <figure class="img-slot ratio-169 reveal"
                 data-label="IMG-02（トップと共通）: assets/img-02-onboarding.png">
-          <img src="assets/img-02-onboarding.png" alt="経営者が伴走者と一緒にPCでClaude Codeを動かしている様子" onerror="this.remove()">
+          <picture>
+            <source type="image/webp" srcset="assets/img-02-onboarding-750.webp 750w, assets/img-02-onboarding.webp 1672w" sizes="(max-width: 900px) 100vw, 460px">
+            <img src="assets/img-02-onboarding.png" width="1672" height="941" alt="経営者が伴走者と一緒にPCでClaude Codeを動かしている様子" loading="lazy" decoding="async" onerror="this.closest('picture').remove()">
+          </picture>
         </figure>
       </div>
 
@@ -139,6 +159,10 @@
         事例掲載にご協力いただける企業様には、特別条件でご提供しています。
         詳細はお問い合わせの際にご案内します。
       </div>
+
+      <p class="future-line reveal">
+        このサービスの詳しいご紹介と無料相談のお申し込みは、<a href="lp/" class="svc-link" data-cta="services_to_lp">特設ページ →</a>
+      </p>
     </div>
   </section>
 
@@ -160,7 +184,10 @@
         </p>
         <figure class="img-slot ratio-169 reveal"
                 data-label="IMG-03（トップと共通）: assets/img-03-blueprint.png">
-          <img src="assets/img-03-blueprint.png" alt="業務フローの設計図の上で、AIに任せる部分と人が判断する部分が色分けされているイメージ" onerror="this.remove()">
+          <picture>
+            <source type="image/webp" srcset="assets/img-03-blueprint-750.webp 750w, assets/img-03-blueprint.webp 1672w" sizes="(max-width: 900px) 100vw, 460px">
+            <img src="assets/img-03-blueprint.png" width="1672" height="941" alt="業務フローの設計図の上で、AIに任せる部分と人が判断する部分が色分けされているイメージ" loading="lazy" decoding="async" onerror="this.closest('picture').remove()">
+          </picture>
         </figure>
       </div>
 
@@ -176,22 +203,22 @@
       <table class="spec-table reveal">
         <tbody>
           <tr>
-            <th>1. 診断<br><small style="font-family:var(--font-eng); color:var(--accent); letter-spacing:0.1em;">AUDIT / 2〜3営業日</small></th>
+            <th>1. 診断<br><small style="font-family:var(--font-eng); color:var(--accent-deep); letter-spacing:0.1em;">AUDIT / 2〜3営業日</small></th>
             <td>業務の流れ、情報の在り処、いまのAI活用状況を棚卸しします。<br>
             <strong>成果物：</strong>業務フローマップ / 情報ソース一覧 / リスクと機会のリスト</td>
           </tr>
           <tr>
-            <th>2. 設計<br><small style="font-family:var(--font-eng); color:var(--accent); letter-spacing:0.1em;">BLUEPRINT / 5〜7営業日</small></th>
+            <th>2. 設計<br><small style="font-family:var(--font-eng); color:var(--accent-deep); letter-spacing:0.1em;">BLUEPRINT / 5〜7営業日</small></th>
             <td>AIと人の役割分担、品質チェックの関所、情報の置き場所を設計図に起こします。<br>
             <strong>成果物：</strong>役割カード一式 / 品質ゲート定義 / 情報の地図（どこに何を置くか）</td>
           </tr>
           <tr>
-            <th>3. 試運転<br><small style="font-family:var(--font-eng); color:var(--accent); letter-spacing:0.1em;">PILOT / 2〜4週間</small></th>
+            <th>3. 試運転<br><small style="font-family:var(--font-eng); color:var(--accent-deep); letter-spacing:0.1em;">PILOT / 2〜4週間</small></th>
             <td>設計を実際の業務で回し、導入前後の変化を確かめます。<br>
             <strong>成果物：</strong>Before/After比較 / 実運用の課題ログ / 改善済みの運用手順</td>
           </tr>
           <tr>
-            <th>4. 伴走<br><small style="font-family:var(--font-eng); color:var(--accent); letter-spacing:0.1em;">RETAINER / 月次</small></th>
+            <th>4. 伴走<br><small style="font-family:var(--font-eng); color:var(--accent-deep); letter-spacing:0.1em;">RETAINER / 月次</small></th>
             <td>月次レビューで仕組みを育て、適用範囲を広げます。<br>
             <strong>成果物：</strong>月次レビュー記録 / 次に広げる業務の優先順位リスト</td>
           </tr>
@@ -228,7 +255,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <img class="symbol" src="assets/authentric-symbol-black.png" alt="AUTHENTRIC">
+        <img class="symbol" src="assets/authentric-symbol-96.png" width="96" height="96" alt="AUTHENTRIC">
         <p>AIを「使える人がいる会社」から、「AIが働く会社」へ。AI業務OS設計のAUTHENTRIC。</p>
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">

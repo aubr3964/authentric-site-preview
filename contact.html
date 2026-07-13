@@ -5,18 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>お問い合わせ | AUTHENTRIC</title>
   <meta name="description" content="AUTHENTRICへのお問い合わせ。AI導入のご相談、サービスに関するご質問など、お気軽にご連絡ください。">
-  <link rel="icon" type="image/png" href="assets/authentric-symbol-black.png">
+  <!-- 公開前のためnoindex。本公開時に削除する（README公開チェックリスト参照） -->
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://aubr3964.github.io/authentric-site-preview/contact.html">
+  <meta property="og:site_name" content="AUTHENTRIC">
+  <meta property="og:title" content="お問い合わせ | AUTHENTRIC">
+  <meta property="og:description" content="AI導入のご相談、サービスに関するご質問など、お気軽にご連絡ください。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aubr3964.github.io/authentric-site-preview/contact.html">
+  <meta property="og:image" content="https://aubr3964.github.io/authentric-site-preview/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Shippori+Mincho:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Shippori+Mincho:wght@600&family=Inter:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main">本文へスキップ</a>
+
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="AUTHENTRIC ホーム">
-      <img class="symbol" src="assets/authentric-symbol-black.png" alt="">
+      <img class="symbol" src="assets/authentric-symbol-96.png" width="96" height="96" alt="">
       <img class="wordmark" src="assets/brand-wordmark-black.png" alt="AUTHENTRIC">
     </a>
     <button class="nav-toggle" data-nav-toggle aria-label="メニュー" aria-expanded="false">≡</button>
@@ -29,7 +46,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 
   <div class="page-head">
     <div class="wrap">
@@ -109,6 +126,7 @@
             <label><input type="checkbox" name="interest" value="business-os">AI業務OS構築</label>
             <label><input type="checkbox" name="interest" value="other">その他・まだ分からない</label>
           </div>
+          <p class="field-error" data-error-for="interest" aria-live="polite"></p>
         </div>
         <div class="field-group">
           <label for="message">相談したいこと<span class="opt">任意</span></label>
@@ -123,6 +141,18 @@
             <option>どちらでも</option>
           </select>
         </div>
+        <div class="field-group consent-row">
+          <div class="check-row">
+            <label><input type="checkbox" name="privacy_consent" value="agree"><span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する</span><span class="req">必須</span></label>
+          </div>
+          <p class="field-error" data-error-for="privacy_consent" aria-live="polite"></p>
+        </div>
+
+        <p class="hp-field" aria-hidden="true">
+          <label for="company_url">会社URL（入力しないでください）</label>
+          <input id="company_url" name="company_url" type="text" tabindex="-1" autocomplete="off">
+        </p>
+
         <div class="form-foot">
           <button class="btn btn-primary" type="submit" data-cta="contact_submit">送信する <span class="arrow">→</span></button>
           <p class="form-note">
@@ -141,7 +171,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <img class="symbol" src="assets/authentric-symbol-black.png" alt="AUTHENTRIC">
+        <img class="symbol" src="assets/authentric-symbol-96.png" width="96" height="96" alt="AUTHENTRIC">
         <p>AIを「使える人がいる会社」から、「AIが働く会社」へ。AI業務OS設計のAUTHENTRIC。</p>
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">

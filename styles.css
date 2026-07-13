@@ -8,7 +8,7 @@
   --surface: #ffffff;
   --ink: #1c1a17;
   --ink-sub: #5c574d;
-  --ink-faint: #8a8478;
+  --ink-faint: #6f695d; /* 小サイズ文字で WCAG AA (4.5:1) を満たす下限付近に設定 */
   --line: #e7e1d5;
   --line-strong: #d8d1c2;
   --accent: #d9480f;
@@ -27,6 +27,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
+
+[id] { scroll-margin-top: 84px; }
 
 body {
   font-family: var(--font-body);
@@ -56,6 +58,22 @@ h1, h2, h3 { text-wrap: balance; }
   margin: -1px; padding: 0; overflow: hidden;
   clip: rect(0 0 0 0); border: 0;
 }
+
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute; left: 16px; top: -48px; z-index: 300;
+  background: var(--ink); color: #fff;
+  font-size: 13px; font-weight: 700;
+  padding: 10px 18px; border-radius: 0 0 10px 10px;
+  transition: top 0.15s;
+}
+.skip-link:focus-visible { top: 0; }
 
 /* ---------- header ---------- */
 
@@ -124,7 +142,7 @@ section.block.tinted { background: var(--surface); }
 }
 .kicker .no {
   font-family: var(--font-eng); font-size: 13px; font-weight: 600;
-  color: var(--accent); letter-spacing: 0.12em;
+  color: var(--accent-deep); letter-spacing: 0.12em;
 }
 .kicker .label {
   font-size: 13px; font-weight: 700; color: var(--ink-faint);
@@ -183,7 +201,8 @@ h1.hero-title {
 
 /* hero mockup cluster — 実物の空気を出す手描きUI */
 
-.mock-cluster { position: relative; min-height: 490px; }
+/* カード同士は重ねない（テキストが隠れるため）。左右のずらしと影で奥行きを出す */
+.mock-cluster { position: relative; min-height: 580px; }
 
 .mock-card {
   position: absolute;
@@ -212,7 +231,7 @@ h1.hero-title {
 .mock-repo li.file::before { content: "· "; color: var(--line-strong); }
 .mock-repo li strong { color: var(--ink); font-weight: 600; }
 
-.mock-role { width: 300px; top: 96px; right: 0; z-index: 3; }
+.mock-role { width: 300px; top: 220px; right: 0; z-index: 3; }
 .mock-role .body { padding: 14px 18px 18px; font-size: 12px; }
 .mock-role dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; }
 .mock-role dt { color: var(--ink-faint); font-weight: 700; white-space: nowrap; }
@@ -220,7 +239,7 @@ h1.hero-title {
 .mock-role dd.ok::before { content: "✓ "; color: var(--ok); font-weight: 700; }
 .mock-role dd.ng::before { content: "✕ "; color: var(--accent); font-weight: 700; }
 
-.mock-routine { width: 280px; top: 262px; left: 24px; z-index: 4; }
+.mock-routine { width: 280px; top: 402px; left: 24px; z-index: 4; }
 .mock-routine ul { padding: 10px 16px 16px; font-size: 12px; }
 .mock-routine li {
   display: flex; justify-content: space-between; align-items: center;
@@ -379,7 +398,7 @@ h1.hero-title {
 
 .svc-step {
   font-family: var(--font-eng); font-size: 12px; font-weight: 600;
-  letter-spacing: 0.16em; color: var(--accent);
+  letter-spacing: 0.16em; color: var(--accent-deep);
   margin-bottom: 16px;
 }
 .svc-card h3 { font-size: 27px; font-weight: 900; line-height: 1.5; margin-bottom: 6px; }
@@ -474,7 +493,7 @@ h1.hero-title {
 .flow-step:last-child::after { content: none; }
 .flow-step .f-en {
   font-family: var(--font-eng); font-size: 11px; font-weight: 600;
-  letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase;
+  letter-spacing: 0.14em; color: var(--accent-deep); text-transform: uppercase;
   display: block; margin-bottom: 8px;
 }
 .flow-step h3 { font-size: 19px; font-weight: 800; margin-bottom: 4px; }
@@ -652,10 +671,10 @@ h1.hero-title {
 .mission-block { text-align: center; padding: 130px 0; }
 .mission-block .m-label {
   font-family: var(--font-eng); font-size: 12px; font-weight: 600;
-  letter-spacing: 0.3em; color: var(--accent); text-transform: uppercase;
+  letter-spacing: 0.3em; color: var(--accent-deep); text-transform: uppercase;
   display: block; margin-bottom: 36px;
 }
-.mission-block h2 {
+.mission-block h1, .mission-block h2 {
   font-family: var(--font-serif);
   font-size: clamp(24px, 3.8vw, 36px); font-weight: 600;
   line-height: 2.1; letter-spacing: 0.06em;
@@ -700,7 +719,7 @@ h1.hero-title {
   border: 1px solid var(--line-strong); background: var(--surface);
   display: grid; place-items: center;
   font-family: var(--font-eng); font-size: 12px; font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-deep);
 }
 .step-list li strong { display: block; color: var(--ink); font-size: 16px; margin-bottom: 4px; }
 
@@ -751,6 +770,20 @@ h1.hero-title {
 }
 .check-row input { accent-color: var(--accent); }
 
+.field-error {
+  font-size: 12px; font-weight: 700; color: var(--accent-deep);
+  margin-top: 8px;
+}
+.field-error:empty { display: none; }
+
+.consent-row label a { text-decoration: underline; }
+
+/* honeypot: 画面外に隠す（display:noneはbotに検知されやすい） */
+.hp-field {
+  position: absolute !important; width: 1px; height: 1px;
+  margin: -1px; overflow: hidden; clip: rect(0 0 0 0); border: 0; padding: 0;
+}
+
 .form-foot { margin-top: 32px; }
 .form-foot .btn { width: 100%; justify-content: center; }
 .form-note { margin-top: 16px; font-size: 12px; color: var(--ink-faint); text-align: center; }
@@ -779,10 +812,11 @@ h1.hero-title {
 
 /* ---------- reveal ---------- */
 
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.in { opacity: 1; transform: none; }
+/* JSが動いた場合のみ隠す（script.jsが <html> に .js を付与）。JS無効・読込失敗時は常に表示 */
+html.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+html.js .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
+  html.js .reveal { opacity: 1; transform: none; transition: none; }
 }
 
 /* ---------- responsive ---------- */
@@ -792,7 +826,7 @@ h1.hero-title {
 
   .hero { padding: 56px 0 72px; }
   .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-  .mock-cluster { min-height: 460px; max-width: 480px; margin: 0 auto; }
+  .mock-cluster { min-height: 580px; max-width: 480px; margin: 0 auto; }
 
   .card-row, .trust-grid { grid-template-columns: 1fr; }
   .intro-grid, .os-grid, .svc-grid, .guide-grid, .member-grid, .svc-detail-grid { grid-template-columns: 1fr; }
@@ -828,10 +862,10 @@ h1.hero-title {
 
 @media (max-width: 520px) {
   .flow-row { grid-template-columns: 1fr; }
-  .mock-cluster { min-height: 600px; }
+  .mock-cluster { min-height: 660px; }
   .mock-repo { width: 260px; }
-  .mock-role { width: 250px; top: 150px; }
-  .mock-routine { width: 240px; left: 10px; top: 400px; }
+  .mock-role { width: 250px; top: 250px; }
+  .mock-routine { width: 240px; left: 10px; top: 460px; }
   .hero-actions .btn { width: 100%; justify-content: center; }
   .member-card { flex-direction: column; align-items: flex-start; }
 }
