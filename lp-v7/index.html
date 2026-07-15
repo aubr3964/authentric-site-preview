@@ -104,7 +104,7 @@ a{color:inherit}
 .sec-head .cap::before{content:"";width:26px;height:2px;background:var(--gold)}
 .sec-head{display:flex;flex-direction:column;align-items:center}
 .sec-lead{
-  text-align:center;font-size:15.5px;color:var(--body-c);max-width:44em;
+  text-align:center;font-size:16.5px;color:var(--body-c);max-width:44em;
   margin:0 auto;line-height:2.2;
 }
 .sec-lead b{color:var(--ink);font-weight:800}
@@ -227,22 +227,6 @@ a{color:inherit}
 .rs-note{margin-left:auto;font-size:12.5px;color:var(--muted);padding-left:20px}
 
 /* ============================================================
-   数字タイル帯
-   ============================================================ */
-.statbar{padding:44px 0 10px;background:#fff}
-.statbar-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.stat{
-  background:#fff;border:1px solid var(--line);border-radius:8px;
-  padding:20px 12px;text-align:center;
-}
-.stat .n{
-  color:var(--gold-txt);font-size:clamp(21px,2.6vw,28px);font-weight:800;
-  line-height:1.4;white-space:nowrap;
-}
-.stat .n small{font-size:.6em;font-weight:800}
-.stat .l{font-size:12.5px;color:var(--muted);font-weight:700;margin-top:2px}
-
-/* ============================================================
    対応ツール帯
    ============================================================ */
 .tools{padding:34px 0;border-bottom:1px solid var(--line)}
@@ -252,6 +236,18 @@ a{color:inherit}
   border:1px solid var(--line);border-radius:3px;padding:12px 30px;
   font-size:15px;font-weight:800;color:var(--ink);letter-spacing:.04em;
 }
+
+/* ============================================================
+   受講後の姿
+   ============================================================ */
+.after-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.after-card{
+  background:#fff;border:1px solid var(--line);border-radius:10px;padding:32px 30px;
+  border-top:4px solid var(--gold);box-shadow:0 4px 20px rgba(21,26,35,.06);
+}
+.after-card .ac-no{color:var(--gold-txt);font-size:15px;font-weight:800;letter-spacing:.18em;display:block;margin-bottom:10px}
+.after-card h3{color:var(--ink);font-size:clamp(18px,2.4vw,21px);font-weight:800;line-height:1.7;margin-bottom:10px}
+.after-card p{font-size:15.5px;color:var(--body-c);line-height:2}
 
 /* ============================================================
    AIエージェントとは（ダーク・発光ダイアグラム）
@@ -264,7 +260,7 @@ a{color:inherit}
 .ad-col{display:flex;flex-direction:column;gap:12px}
 .ad-bubble{
   background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:12px 12px 12px 2px;
-  padding:14px 18px;font-size:14px;font-weight:700;color:#E6EAF0;line-height:1.8;
+  padding:16px 20px;font-size:15.5px;font-weight:700;color:#E6EAF0;line-height:1.8;
 }
 .ad-arrow{color:var(--gold);font-size:26px;font-weight:900;text-align:center}
 .ad-core-box{
@@ -279,10 +275,10 @@ a{color:inherit}
   box-shadow:0 0 18px 5px rgba(201,162,39,.55);
 }
 .ad-core-name{color:#fff;font-size:18px;font-weight:800;letter-spacing:.06em;margin-bottom:6px}
-.ad-core-sub{color:#9AA3AF;font-size:12.5px;line-height:1.9}
+.ad-core-sub{color:#C0C7D2;font-size:14px;line-height:1.9}
 .ad-out{
   background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-left:3px solid var(--gold);
-  border-radius:6px;padding:12px 16px;font-size:14px;font-weight:800;color:#E6EAF0;
+  border-radius:6px;padding:14px 18px;font-size:15.5px;font-weight:800;color:#E6EAF0;
 }
 .what-points{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px}
 .wp-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:24px 26px}
@@ -298,7 +294,7 @@ a{color:inherit}
 .issue-item img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .issue-item .it-body{padding:20px 24px 24px;text-align:center}
 .issue-item p{font-size:15.5px;font-weight:800;color:var(--ink);line-height:1.9}
-.issue-item p span{display:block;font-size:13.5px;font-weight:500;color:var(--muted);margin-top:6px}
+.issue-item p span{display:block;font-size:14.5px;font-weight:500;color:var(--muted);margin-top:6px}
 .issue-close{
   margin-top:52px;text-align:center;
 }
@@ -323,12 +319,24 @@ a{color:inherit}
   color:var(--ink);font-size:clamp(20px,2.8vw,26px);font-weight:800;
   line-height:1.75;letter-spacing:.04em;margin-bottom:14px;text-wrap:balance;
 }
-.f-txt>p{font-size:15px;line-height:2.15;margin-bottom:16px}
+.f-txt>p{font-size:16px;line-height:2.15;margin-bottom:16px}
 .f-checks{list-style:none;display:grid;gap:8px}
 .f-checks li{
-  display:flex;gap:10px;align-items:baseline;font-size:14.5px;font-weight:700;color:var(--ink);
+  display:flex;gap:10px;align-items:baseline;font-size:15.5px;font-weight:700;color:var(--ink);
 }
 .f-checks li::before{content:"✓";color:var(--blue);font-weight:800;flex:none}
+
+/* 分担図（Feature1ビジュアル用） */
+.share-card{background:#fff;border-radius:6px;box-shadow:0 6px 22px rgba(26,29,33,.08);padding:30px 32px}
+.shc-title{color:var(--ink);font-size:18px;font-weight:800;margin-bottom:18px;text-align:center}
+.shc-row{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;padding:16px 0;border-top:1px solid var(--line)}
+.shc-who{display:inline-grid;place-items:center;background:var(--gray);color:var(--body-c);border-radius:6px;padding:10px 8px;font-size:14.5px;font-weight:800}
+.shc-who--us{background:var(--navy);color:#fff}
+.shc-you{font-size:17px;font-weight:700;color:var(--ink)}
+.shc-you b{color:var(--gold-txt);font-weight:900;font-size:1.15em}
+.shc-row ul{list-style:none;display:grid;gap:6px}
+.shc-row li{font-size:15px;font-weight:700;color:var(--ink);padding-left:1.5em;position:relative;line-height:1.8}
+.shc-row li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
 
 /* 実物風ドキュメント（Featureビジュアル用） */
 .doc{
@@ -385,9 +393,9 @@ a{color:inherit}
 .step h4{color:var(--ink);font-size:15.5px;font-weight:800;line-height:1.7;margin-bottom:6px}
 .step .s-tag{display:block;font-size:12.5px;color:var(--blue);font-weight:700;margin-bottom:6px}
 .step--gold .s-tag{color:#8F7015}
-.step p{font-size:13.5px;color:var(--muted);line-height:1.9;text-align:left}
+.step p{font-size:15px;color:var(--muted);line-height:1.9;text-align:left}
 .steps-note{
-  margin-top:44px;text-align:center;font-size:15px;color:var(--body-c);line-height:2.2;
+  margin-top:44px;text-align:center;font-size:16px;color:var(--body-c);line-height:2.2;
 }
 .steps-note b{color:var(--ink)}
 
@@ -398,7 +406,7 @@ a{color:inherit}
 .dl-item{background:#fff;border-radius:4px;padding:26px 28px}
 .dl-item .d-no{color:var(--blue);font-size:13px;font-weight:800;letter-spacing:.14em;margin-bottom:8px}
 .dl-item h4{color:var(--ink);font-size:16.5px;font-weight:800;margin-bottom:6px;line-height:1.7}
-.dl-item p{font-size:13.5px;color:var(--muted);line-height:1.95}
+.dl-item p{font-size:15px;color:var(--muted);line-height:1.95}
 .dl-note{margin-top:36px;text-align:center;font-size:15.5px;font-weight:800;color:var(--ink)}
 
 
@@ -416,7 +424,7 @@ a{color:inherit}
 .p-eff small{font-size:.7em;font-weight:700;color:var(--muted)}
 .pack-row .p-no{color:var(--blue);font-size:14px;font-weight:800;letter-spacing:.08em}
 .pack-row h4{color:var(--ink);font-size:16px;font-weight:800}
-.pack-row p{font-size:14px;color:var(--body-c)}
+.pack-row p{font-size:15px;color:var(--body-c)}
 .pack-row p b{color:var(--ink);font-weight:700}
 .pack-row .arr{color:var(--blue);font-weight:800;padding:0 4px}
 .pack-note{margin-top:30px;display:flex;justify-content:center;gap:28px;flex-wrap:wrap;list-style:none}
@@ -435,7 +443,7 @@ a{color:inherit}
 .sec-item{padding:26px 4px;border-bottom:1px solid #DDDFE3;display:flex;gap:16px;align-items:flex-start}
 .sec-item .s-chk{color:var(--blue);font-weight:800;font-size:18px;flex:none;line-height:1.9}
 .sec-item h4{color:var(--ink);font-size:16.5px;font-weight:800;line-height:1.8;margin-bottom:4px}
-.sec-item p{font-size:14px;color:var(--muted);line-height:2}
+.sec-item p{font-size:15px;color:var(--muted);line-height:2}
 
 /* ============================================================
    比較表
@@ -453,7 +461,8 @@ a{color:inherit}
 .cmp td.a::before{content:"◎ ";color:var(--blue);font-weight:800}
 
 /* 向き不向き */
-.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;margin-top:44px}
+.fit-grid{display:grid;grid-template-columns:1fr;margin-top:44px;max-width:760px;margin-left:auto;margin-right:auto}
+.fit-col ul{display:grid;grid-template-columns:1fr;gap:0}
 .fit-col h4{
   color:var(--ink);font-size:16.5px;font-weight:800;margin-bottom:8px;
   padding-bottom:10px;border-bottom:2px solid var(--blue);
@@ -461,7 +470,7 @@ a{color:inherit}
 .fit-col--no h4{border-bottom-color:#CFD3D9;color:var(--muted)}
 .fit-col ul{list-style:none}
 .fit-col li{
-  font-size:14.5px;line-height:2;padding:12px 2px 12px 1.8em;position:relative;
+  font-size:15.5px;line-height:2;padding:12px 2px 12px 1.8em;position:relative;
   color:var(--body-c);font-weight:600;border-bottom:1px solid var(--line);
 }
 .fit-col--yes li::before{content:"○";position:absolute;left:0;color:var(--blue);font-weight:800}
@@ -477,7 +486,7 @@ a{color:inherit}
 .price-card .p-main{
   color:var(--ink);font-size:clamp(18px,2.6vw,23px);font-weight:800;line-height:2;max-width:30em;margin:0 auto;
 }
-.price-card .p-sub{font-size:14.5px;color:var(--body-c);max-width:36em;margin:16px auto 0;line-height:2.1}
+.price-card .p-sub{font-size:15.5px;color:var(--body-c);max-width:36em;margin:16px auto 0;line-height:2.1}
 .price-card .p-sub b{color:var(--ink)}
 .price-partner{
   max-width:560px;margin:30px auto 0;background:var(--gray);border-radius:4px;padding:22px 28px;
@@ -502,7 +511,7 @@ a{color:inherit}
 .faq-item summary::after{content:"⌄";margin-left:auto;color:var(--muted);font-size:15px;flex:none;transition:transform .2s ease}
 .faq-item[open] summary::after{transform:rotate(180deg)}
 .faq-item summary:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
-.faq-item .faq-a{display:flex;gap:12px;padding:0 4px 20px;font-size:14px;color:var(--body-c);line-height:2.1}
+.faq-item .faq-a{display:flex;gap:12px;padding:0 4px 20px;font-size:15px;color:var(--body-c);line-height:2.1}
 .faq-item .faq-a::before{content:"A.";color:var(--muted);font-weight:800;flex:none}
 
 .form-col h3{color:var(--blue);font-size:clamp(18px,2.4vw,21px);font-weight:800;margin-bottom:6px;letter-spacing:.04em}
@@ -613,8 +622,8 @@ html.js .rv.on{opacity:1;transition:opacity .5s ease}
    ============================================================ */
 @media (max-width:960px){
   .hero-grid{grid-template-columns:1fr;gap:40px}
-  .statbar-grid{grid-template-columns:repeat(3,1fr)}
   .agent-diagram{grid-template-columns:1fr}
+  .after-grid{grid-template-columns:1fr}
   .ad-arrow{transform:rotate(90deg);padding:2px 0}
   .what-points{grid-template-columns:1fr}
   .sec-split{grid-template-columns:1fr;gap:28px}
@@ -640,7 +649,6 @@ html.js .rv.on{opacity:1;transition:opacity .5s ease}
   .pack-row{grid-template-columns:44px 1fr;gap:4px 14px}
   .pack-row p{grid-column:2}
   .p-eff{grid-column:2;text-align:left}
-  .statbar-grid{grid-template-columns:repeat(2,1fr)}
   .wm{font-size:56px;top:16px}
   .form-row-split,.check-group{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:26px}
@@ -681,7 +689,7 @@ html.js .rv.on{opacity:1;transition:opacity .5s ease}
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <h1>AIエージェントを、<br><span class="nw"><span class="gd">「自分で動かせる」</span>へ。</span></h1>
+          <h1>Claude Codeで、<br><span class="nw"><span class="gd">経営を動かせる</span>状態へ。</span></h1>
           <p class="hero-sub">経営者・非エンジニアのための AIエージェント導入伴走サービス</p>
           <div class="hero-specs">
             <div class="hero-spec"><div class="n">90分<small>×</small>2回</div><div class="l">ハンズオン</div></div>
@@ -713,17 +721,6 @@ html.js .rv.on{opacity:1;transition:opacity .5s ease}
     </div>
   </section>
 
-  <!-- 数字タイル帯 -->
-  <div class="statbar" aria-label="サービスの数字">
-    <div class="wrap statbar-grid">
-      <div class="stat"><div class="n">90分<small>×</small>2回</div><div class="l">ハンズオンセッション</div></div>
-      <div class="stat"><div class="n">14日間</div><div class="l">導入後チャットサポート</div></div>
-      <div class="stat"><div class="n">1〜2名</div><div class="l">マンツーマン伴走</div></div>
-      <div class="stat"><div class="n">6→1</div><div class="l">標準パックから選定・実装</div></div>
-      <div class="stat"><div class="n">24h</div><div class="l">問い合わせ返信（営業日）</div></div>
-    </div>
-  </div>
-
   <!-- 対応ツール帯 -->
   <div class="tools">
     <div class="wrap tools-inner">
@@ -735,6 +732,36 @@ html.js .rv.on{opacity:1;transition:opacity .5s ease}
   </div>
 
   <!-- ============================================================
+       受講後の姿
+       ============================================================ -->
+  <section class="sec" aria-labelledby="after-h">
+    <span class="wm" aria-hidden="true">AFTER</span>
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="cap">受講後のあなた</span>
+        <h2 id="after-h">このパックを受けると、<span class="gd">こうなります</span></h2>
+      </div>
+      <div class="after-grid rv">
+        <div class="after-card">
+          <span class="ac-no">01</span>
+          <h3>AIエージェントを<br>バリバリ触れる</h3>
+          <p>日本語で業務を頼み、成果物を受け取る。その一連の流れを自分の手で回せるようになります。</p>
+        </div>
+        <div class="after-card">
+          <span class="ac-no">02</span>
+          <h3>御社専用のAI環境で<br>自動化が1つ動いている</h3>
+          <p>ハンズオンで実装した自動化が、受講後そのまま実務で稼働しています。</p>
+        </div>
+        <div class="after-card">
+          <span class="ac-no">03</span>
+          <h3>次にどの業務を任せるか<br>自分で判断できる</h3>
+          <p>「AIに何をさせるべきか」を、体験にもとづいて経営判断できるようになります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        そもそもAIエージェントとは（教育・ダーク）
        ============================================================ -->
   <section class="sec sec--dark" aria-labelledby="what-h">
@@ -744,13 +771,13 @@ html.js .rv.on{opacity:1;transition:opacity .5s ease}
         <span class="cap">WHAT IS AI AGENT</span>
         <h2 id="what-h">そもそも、<span class="gd">AIエージェント</span>とは？</h2>
       </div>
-      <p class="sec-lead rv">ChatGPTのような「質問に答えるAI」ではなく、<b>日本語で頼むだけで、実際に作業を完了させて成果物を返す</b>AIです。</p>
+      <p class="sec-lead rv">ChatGPTのような「質問に答えるAI」ではなく、<b>日本語で頼むだけで、実際に作業を完了させて成果物を返す</b>AIです。<br>ハンズオンでは、御社の業務をひとつ実際に任せるところまで体験します。</p>
 
       <div class="agent-diagram rv" role="img" aria-label="「先週の会議メモから議事録を作って」と日本語で頼むと、AIエージェントが議事録・お礼メール下書き・週次レポートなどの成果物を作って返す流れの図">
         <div class="ad-col ad-col--in">
           <p class="ad-label">あなたがすること</p>
-          <div class="ad-bubble">「先週の会議メモから<br>議事録を作って」</div>
-          <div class="ad-bubble">「この商談メモから<br>お礼メールの下書きを」</div>
+          <div class="ad-bubble">日々の業務を、<br>日本語でそのまま頼む</div>
+          <div class="ad-bubble">「この資料、<br>まとめておいて」</div>
         </div>
         <div class="ad-arrow" aria-hidden="true">→</div>
         <div class="ad-core">
@@ -762,18 +789,13 @@ html.js .rv.on{opacity:1;transition:opacity .5s ease}
         </div>
         <div class="ad-arrow" aria-hidden="true">→</div>
         <div class="ad-col ad-col--out">
-          <p class="ad-label">返ってくる成果物</p>
-          <div class="ad-out">議事録・決定事項・ToDo</div>
-          <div class="ad-out">お礼メールの下書き</div>
-          <div class="ad-out">週次レポート</div>
+          <p class="ad-label">返ってくるもの</p>
+          <div class="ad-out">完成した文書・資料</div>
+          <div class="ad-out">整理されたデータ</div>
+          <div class="ad-out">次のアクション案</div>
         </div>
       </div>
 
-      <div class="what-points rv">
-        <div class="wp-item"><span class="wp-no">01</span><h4>日本語で頼むだけ</h4><p>プログラミング知識は不要。話しかける感覚で業務を任せられます。</p></div>
-        <div class="wp-item"><span class="wp-no">02</span><h4>業務をまるごと完了</h4><p>回答ではなく「完成した成果物」が返ってきます。議事録・メール・レポートなど。</p></div>
-        <div class="wp-item"><span class="wp-no">03</span><h4>会社の資産になる</h4><p>依頼のたびに手順とテンプレートが蓄積し、だれでも同じ品質で使えるようになります。</p></div>
-      </div>
     </div>
   </section>
 
@@ -847,17 +869,21 @@ html.js .rv.on{opacity:1;transition:opacity .5s ease}
       <div class="feat-rows">
         <div class="feat-row rv">
           <div class="f-vis">
-            <div class="doc" aria-hidden="true">
-              <p class="doc-cap">SETUP REPORT</p>
-              <p class="doc-title">初期セットアップ完了報告</p>
-              <p class="doc-sec">AUTHENTRICが実施した項目</p>
-              <p class="doc-row">Claude Code / Codex の接続設定</p>
-              <p class="doc-row">御社専用リポジトリの作成・初期構成</p>
-              <p class="doc-row">指示テンプレート・マニュアルの投入</p>
-              <p class="doc-row">セキュリティルールの文書化</p>
-              <p class="doc-sec">御社にお願いした作業</p>
-              <p class="doc-row mut">ありません（アカウントのご用意のみ）</p>
-              <p class="doc-foot"><span>所要期間</span><b>初回セッションまでに完了</b></p>
+            <div class="share-card" aria-hidden="true">
+              <p class="shc-title">導入準備の分担</p>
+              <div class="shc-row shc-row--you">
+                <span class="shc-who">御社</span>
+                <p class="shc-you">アカウントのご用意 <b>だけ</b></p>
+              </div>
+              <div class="shc-row">
+                <span class="shc-who shc-who--us">AUTHENTRIC</span>
+                <ul>
+                  <li>ツールの選定</li>
+                  <li>環境構築・初期設定</li>
+                  <li>セキュリティルールの整備</li>
+                  <li>御社専用テンプレートの投入</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="f-txt">
@@ -960,9 +986,9 @@ html.js .rv.on{opacity:1;transition:opacity .5s ease}
         </li>
         <li class="step">
           <span class="s-num" aria-hidden="true">4</span>
-          <h4>14日間サポート</h4>
+          <h4>14日間チャットサポート</h4>
           <span class="s-tag">セッション後</span>
-          <p>チャットで随時対応。自走を確認後、AUTHENTRICのアクセスを停止します。</p>
+          <p>導入直後のつまずきは、チャットで質問し放題。2週間の伴走で、自走まで見届けます。</p>
         </li>
       </ol>
       <p class="steps-note rv">御社の負担は<b>「90分×2回」＋「間で小さな依頼を1回試すこと」</b>だけ。<br>仕込みはすべてAUTHENTRICが行います。</p>
@@ -1024,9 +1050,9 @@ html.js .rv.on{opacity:1;transition:opacity .5s ease}
     <div class="wrap">
       <div class="sec-head rv">
         <span class="cap">Automation Packs</span>
-        <h2 id="packs-h">6つの標準パックから、<span class="gd">1つを実装</span></h2>
+        <h2 id="packs-h">ハンズオンで、御社の自動化を<span class="gd">1つ実装します</span></h2>
       </div>
-      <p class="sec-lead rv">御社の課題に合わせて6つから1つを選定し、実務で使える状態まで導入します。</p>
+      <p class="sec-lead rv">テーマは御社の課題に合わせて一緒に選定します。<b>例えば、こんな業務から始められます。</b></p>
       <div class="pack-list rv">
         <div class="pack-row">
           <span class="p-no">01</span>
@@ -1181,16 +1207,8 @@ html.js .rv.on{opacity:1;transition:opacity .5s ease}
             <li>会議・調査・営業・問い合わせ・日報に時間を取られている</li>
           </ul>
         </div>
-        <div class="fit-col fit-col--no">
-          <h4>こんなご要望には向いていません</h4>
-          <ul>
-            <li>全社一斉の大人数研修だけを実施したい</li>
-            <li>本格的なシステム開発・API開発を依頼したい</li>
-            <li>最初から基幹システム連携・自動送信を求めたい</li>
-          </ul>
-        </div>
       </div>
-      <p class="fit-note rv">※ 大人数研修・継続伴走をご希望の場合も、別プランをご用意しています。無料相談でお聞かせください。</p>
+      <p class="fit-note rv">※ 大人数研修・継続伴走・本格的な開発をご希望の場合も、別プランをご用意しています。無料相談でお聞かせください。</p>
     </div>
   </section>
 
